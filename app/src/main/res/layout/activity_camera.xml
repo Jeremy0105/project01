@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CameraActivity">
+
+    <!-- 群組信息文本 -->
+    <TextView
+        android:id="@+id/group_info_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_700"
+        android:padding="8dp"
+        android:text="@string/camera_group_info"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 檢測狀態按鈕 -->
+    <Button
+        android:id="@+id/detection_status_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/detection_status_button_background"
+        android:text="@string/detection_status_not_detected"
+        android:textColor="#FF0000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="12dp"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@+id/group_info_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 相機預覽 -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/viewFinder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/camera_capture_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detection_status_text" />
+
+    <!-- 檢測覆蓋層 - 顯示綠色圓框 -->
+    <ImageView
+        android:id="@+id/detection_overlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/detection_overlay_desc"
+        app:layout_constraintBottom_toBottomOf="@+id/viewFinder"
+        app:layout_constraintEnd_toEndOf="@+id/viewFinder"
+        app:layout_constraintStart_toStartOf="@+id/viewFinder"
+        app:layout_constraintTop_toTopOf="@+id/viewFinder" />
+
+    <!-- 圖片預覽 ImageView -->
+    <ImageView
+        android:id="@+id/preview_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:contentDescription="@string/preview_image_desc"
+        app:layout_constraintBottom_toTopOf="@+id/camera_capture_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detection_status_text" />
+
+    <!-- 底部按鈕 -->
+    <Button
+        android:id="@+id/camera_capture_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/capture_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/analyze_button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/analyze_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/analyze_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/camera_capture_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

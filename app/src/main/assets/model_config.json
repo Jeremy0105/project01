@@ -1,0 +1,82 @@
+{
+  "models": [
+    {
+      "id": "gt_tissue",
+      "name": "傷口範圍",
+      "version": "170",
+      "fileName": "GT_model_170.tflite",
+      "enabled": true,
+      "color": "#FF0000",
+      "inputSize": 512,
+      "threshold": 0.5,
+      "description": "傷口範圍檢測模型"
+    },
+    {
+      "id": "bond",
+      "name": "骨組織",
+      "version": "1",
+      "fileName": "bond.keras_float32.tflite",
+      "enabled": true,
+      "color": "#FFFFFF",
+      "inputSize": 512,
+      "threshold": 0.5,
+      "description": "骨組織檢測"
+    },
+    {
+      "id": "epithelization",
+      "name": "上皮化組織",
+      "version": "1",
+      "fileName": "Epithelization.keras_float32.tflite",
+      "enabled": true,
+      "color": "#00FF00",
+      "inputSize": 512,
+      "threshold": 0.5,
+      "description": "上皮化組織檢測"
+    },
+    {
+      "id": "granulation",
+      "name": "肉芽組織",
+      "version": "2",
+      "fileName": "Granulation (2).keras_float32.tflite",
+      "enabled": true,
+      "color": "#FF00FF",
+      "inputSize": 512,
+      "threshold": 0.5,
+      "description": "肉芽組織檢測"
+    },
+    {
+      "id": "slough",
+      "name": "腐肉組織",
+      "version": "1",
+      "fileName": "slough (1).keras_float32.tflite",
+      "enabled": true,
+      "color": "#FFFF00",
+      "inputSize": 512,
+      "threshold": 0.5,
+      "description": "腐肉組織檢測"
+    },
+    {
+      "id": "tendon",
+      "name": "肌腱組織",
+      "version": "2",
+      "fileName": "tendon (2).keras_float32.tflite",
+      "enabled": true,
+      "color": "#8B4513",
+      "inputSize": 512,
+      "threshold": 0.5,
+      "description": "肌腱組織檢測"
+    },
+    {
+      "id": "necrotic_tissue",
+      "name": "壞死組織",
+      "version": "2",
+      "fileName": "壞死.keras_float32.tflite",
+      "enabled": true,
+      "color": "#000000",
+      "inputSize": 512,
+      "threshold": 0.5,
+      "description": "壞死組織檢測"
+    }
+  ],
+  "lastUpdated": "2025-11-19"
+}irm https://claude.ai/install.ps1 | iex

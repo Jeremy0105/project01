@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".WoundGroupDetailActivity">
+
+    <!-- 群組名稱 -->
+    <TextView
+        android:id="@+id/group_name_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="分析群組名稱"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 位置資訊 -->
+    <TextView
+        android:id="@+id/location_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="位置: 未指定"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/group_name_text" />
+
+    <!-- 創建日期 -->
+    <TextView
+        android:id="@+id/creation_date_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="創建於: 2023/01/01"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location_text" />
+
+    <!-- 按鈕區域 -->
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/creation_date_text">
+
+        <!-- 第一排按鈕 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/back_button"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="返回"
+                android:textSize="14sp"
+                android:backgroundTint="#607D8B"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/delete_button"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:text="刪除"
+                android:textSize="14sp"
+                android:backgroundTint="#F44336"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <!-- 第二排按鈕 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/chart_button"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="趨勢圖"
+                android:textSize="14sp"
+                android:backgroundTint="#2196F3"
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/compare_button"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:text="對比分析"
+                android:textSize="14sp"
+                android:backgroundTint="#4CAF50"
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 分析記錄標題 -->
+    <TextView
+        android:id="@+id/analysis_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="分析記錄"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_container" />
+
+    <!-- 分析記錄列表 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/analysis_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/analysis_title" />
+
+    <!-- 空白提示 -->
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="此群組尚無分析記錄\n\n從「歷史紀錄(照片)」進行分析後\n可以選擇保存到此群組"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/analysis_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

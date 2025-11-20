@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 檢測失敗/檢測中狀態 -->
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <solid android:color="#FF4444" />
+            <corners android:radius="8dp" />
+            <stroke android:width="2dp" android:color="#CC0000" />
+        </shape>
+    </item>
+    <!-- 檢測成功狀態 -->
+    <item android:state_enabled="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#4CAF50" />
+            <corners android:radius="8dp" />
+            <stroke android:width="2dp" android:color="#2E7D32" />
+        </shape>
+    </item>
+</selector>

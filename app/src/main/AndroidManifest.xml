@@ -1,0 +1,67 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <!-- 相機權限 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+
+    <!-- Android 13+ 的媒體權限 -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED"/>
+
+    <!-- 舊版 Android 的存儲權限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TopicsDiabetes"
+        tools:targetApi="31">
+
+        <!-- FileProvider 配置 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- 歡迎頁面作為啟動活動 -->
+        <activity android:name=".Welcome" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 主頁面 -->
+        <activity android:name=".Home" android:exported="false"> </activity>
+
+        <!-- 相機活動 -->
+        <activity android:name=".CameraActivity" android:exported="false"/>
+
+        <!-- 分析活動 -->
+        <activity android:name=".AnalysisActivity" android:exported="false"/>
+
+        <!-- 歷史記錄(照片)活動 -->
+        <activity android:name=".HistoryActivity" android:exported="false"/>
+
+        <!-- 歷史記錄(分析)活動 - 新增 -->
+        <activity android:name=".HistoryAnalysisActivity" android:exported="false"/>
+
+        <!-- 傷口管理活動 - 保留原有的 -->
+        <activity android:name=".WoundManagementActivity" android:exported="false"/>
+
+        <!-- 傷口群組詳情活動 -->
+        <activity android:name=".WoundGroupDetailActivity" android:exported="false"/>
+
+    </application>
+</manifest>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Topics - Diabetes</string>
+
+    <!-- 分析活動的字符串資源 -->
+    <string name="analyzing">分析中...</string>
+    <string name="analysis_result">分析結果：\n- 圖像尺寸：1920x1080\n- 檢測到的物體：無\n- 建議：請拍攝更清晰的圖像</string>
+    <string name="back">返回</string>
+    <string name="waiting_for_analysis">等待分析結果...</string>
+    <string name="analysis_image">分析圖像</string>
+
+    <!-- Welcome Activity -->
+    <string name="app_logo">應用標誌</string>
+    <string name="welcome_message">歡迎使用糖尿病管理助手</string>
+    <string name="app_description">Waiting for write in</string>
+    <string name="login">登入</string>
+    <string name="register">註冊</string>
+    <string name="guest_login">訪客登入</string>
+    <string name="app_version">版本 1.0.0</string>
+    <string name="username">用戶名</string>
+    <string name="password">密碼</string>
+    <string name="email">電子郵件</string>
+    <string name="confirm_password">確認密碼</string>
+    <string name="forgot_password">忘記密碼？</string>
+    <string name="forgot_password_instruction">請輸入您註冊時使用的電子郵件地址，我們將發送重置密碼的說明。</string>
+
+    <!-- Camera Activity -->
+    <string name="camera_group_info">拍攝照片將存儲到: 傷口群組</string>
+    <string name="detection_status_not_detected">未檢測到綠色圓形</string>
+    <string name="capture_button">拍照</string>
+    <string name="analyze_button">分析</string>
+    <string name="detection_overlay_desc">綠色圓形檢測覆蓋層</string>
+    <string name="preview_image_desc">照片預覽</string>
+
+    <!-- Common -->
+    <string name="image_thumbnail">圖片縮略圖</string>
+</resources>

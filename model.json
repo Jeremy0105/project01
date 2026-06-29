@@ -1,0 +1,147 @@
+{
+  "model": "Ridge Regression",
+  "r2_score": 0.9871,
+  "features": [
+    "efg",
+    "tov_pct",
+    "orb_pct",
+    "ftr",
+    "net_rtg"
+  ],
+  "coefficients": [
+    0.035921,
+    -0.016507,
+    -0.038189,
+    -0.007326,
+    0.073187
+  ],
+  "intercept": 0.5,
+  "scaler_mean": [
+    0.502742,
+    14.855725,
+    29.275938,
+    0.285425,
+    -0.006509
+  ],
+  "scaler_std": [
+    0.008761,
+    0.662558,
+    1.510977,
+    0.031307,
+    5.986398
+  ],
+  "ranges": {
+    "efg": {
+      "min": 0.44,
+      "max": 0.56,
+      "step": 0.001,
+      "unit": "%",
+      "label": "eFG% (有效命中率)",
+      "scale": 100
+    },
+    "tov_pct": {
+      "min": 11.0,
+      "max": 18.0,
+      "step": 0.1,
+      "unit": "%",
+      "label": "TOV% (失誤率)",
+      "scale": 1
+    },
+    "orb_pct": {
+      "min": 22.0,
+      "max": 35.0,
+      "step": 0.1,
+      "unit": "%",
+      "label": "ORB% (進攻籃板率)",
+      "scale": 1
+    },
+    "ftr": {
+      "min": 0.18,
+      "max": 0.38,
+      "step": 0.001,
+      "unit": "",
+      "label": "FTR (罰球率)",
+      "scale": 1
+    },
+    "net_rtg": {
+      "min": -12,
+      "max": 8.0,
+      "step": 0.1,
+      "unit": "pts",
+      "label": "淨效率值 (Net Rtg)",
+      "scale": 1
+    }
+  },
+  "team_data": [
+    {
+      "name": "高雄全家海神",
+      "efg": 48.76,
+      "tov_pct": 15.59,
+      "orb_pct": 31.45,
+      "ftr": 0.277,
+      "net_rtg": -9.72,
+      "win_rate": 0.25,
+      "win_rate_pred": 0.248
+    },
+    {
+      "name": "臺北台新戰神",
+      "efg": 49.51,
+      "tov_pct": 15.43,
+      "orb_pct": 29.94,
+      "ftr": 0.321,
+      "net_rtg": -7.98,
+      "win_rate": 0.306,
+      "win_rate_pred": 0.332
+    },
+    {
+      "name": "新北國王",
+      "efg": 50.8,
+      "tov_pct": 14.1,
+      "orb_pct": 30.01,
+      "ftr": 0.239,
+      "net_rtg": -1.38,
+      "win_rate": 0.528,
+      "win_rate_pred": 0.516
+    },
+    {
+      "name": "新北中信特攻",
+      "efg": 50.84,
+      "tov_pct": 14.72,
+      "orb_pct": 30.56,
+      "ftr": 0.25,
+      "net_rtg": 4.78,
+      "win_rate": 0.556,
+      "win_rate_pred": 0.561
+    },
+    {
+      "name": "新竹御嵿攻城獅",
+      "efg": 49.77,
+      "tov_pct": 14.39,
+      "orb_pct": 27.38,
+      "ftr": 0.309,
+      "net_rtg": 4.48,
+      "win_rate": 0.611,
+      "win_rate_pred": 0.588
+    },
+    {
+      "name": "福爾摩沙夢想家",
+      "efg": 51.46,
+      "tov_pct": 15.71,
+      "orb_pct": 28.37,
+      "ftr": 0.324,
+      "net_rtg": 4.61,
+      "win_rate": 0.611,
+      "win_rate_pred": 0.597
+    },
+    {
+      "name": "桃園台啤永豐雲豹",
+      "efg": 50.78,
+      "tov_pct": 14.05,
+      "orb_pct": 27.22,
+      "ftr": 0.279,
+      "net_rtg": 5.17,
+      "win_rate": 0.639,
+      "win_rate_pred": 0.658
+    }
+  ]
+}
